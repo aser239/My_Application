@@ -20,6 +20,9 @@
             android:name=".TimeStamp"
             android:exported="false" />-->
         <activity
+            android:name=".TimeActivity"
+            android:exported="false" />
+        <activity
             android:name=".StudentCourseAcitivity"
             android:exported="false" />
         <activity
@@ -63,6 +66,9 @@
             android:name=".Activity.EnrollActivity"
             android:exported="false" />
         <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.TeacherCourseActivity" />
+        <activity android:name=".Activity.StudentCourseActivity" />
+        <activity android:name=".Activity.TimeActivity" />
     </application>
 
 </manifest>
