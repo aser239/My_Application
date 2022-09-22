@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity{
         setContentView(R.layout.activity_login);
 
         etPwd = findViewById(R.id.et_pwd);
-        etUser = findViewById(R.id.et_user);
+//        etUser = findViewById(R.id.et_user);
         cbRememberpwd = findViewById(R.id.cb_remember_pwd);
 
         final ImageView ivPwdSwitch = findViewById(R.id.iv_pwd_switch);

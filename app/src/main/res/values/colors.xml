@@ -13,4 +13,5 @@
     <color name="WhiteSmoke">#F5F5F5</color>
     <color name="TextColor">#546E7A</color>
     <color name="DodgerBlue">#1E90FF</color>
+    <color name="loginBackGround">#0093E9</color>
 </resources>
