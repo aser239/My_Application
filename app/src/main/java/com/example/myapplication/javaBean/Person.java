@@ -8,29 +8,33 @@ public class Person {
     private String id;
     private String appKey;
     private int roleId;
+    private boolean gender;
     private String realName;
     private String idNumber;
     private String collegeName;
     private String phone;
     private String email;
     private String avatar;
-    private String inSchoolTime;
+    private int inSchoolTime;
     private String createTime;
     private String lastUpdateTime;
 
-    public Person(){}
+    public Person() {
+    }
 
-    public void setUsername(String username){
+    public void setUsername(String username) {
         this.userName = username;
     }
-    public String getUsername(){
+
+    public String getUsername() {
         return userName;
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) {
         this.password = password;
     }
-    public String getPassword(){
+
+    public String getPassword() {
         return password;
     }
 
@@ -106,11 +110,11 @@ public class Person {
         this.avatar = avatar;
     }
 
-    public String getInSchoolTime() {
+    public int getInSchoolTime() {
         return inSchoolTime;
     }
 
-    public void setInSchoolTime(String inSchoolTime) {
+    public void setInSchoolTime(int inSchoolTime) {
         this.inSchoolTime = inSchoolTime;
     }
 
@@ -130,14 +134,24 @@ public class Person {
         this.lastUpdateTime = lastUpdateTime;
     }
 
+    public boolean getGender() {
+        return gender;
+    }
+
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+
+    @NonNull
     @Override
     public String toString() {
         return "Person{" +
-                "username='" + userName + '\'' +
+                "userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", id='" + id + '\'' +
                 ", appKey='" + appKey + '\'' +
                 ", roleId=" + roleId +
+                ", gender=" + gender +
                 ", realName='" + realName + '\'' +
                 ", idNumber='" + idNumber + '\'' +
                 ", collegeName='" + collegeName + '\'' +
