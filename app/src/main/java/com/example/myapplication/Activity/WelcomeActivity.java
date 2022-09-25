@@ -14,7 +14,7 @@ import com.example.myapplication.R;
 import java.util.TimerTask;
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private int recLen = 5;//跳过倒计时提示5秒
+    private int recLen = 2;//跳过倒计时提示5秒
     private TextView tv;
     Timer timer = new Timer();
     private Handler handler;

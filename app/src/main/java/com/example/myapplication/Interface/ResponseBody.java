@@ -16,10 +16,8 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public  class ResponseBody <T> {
-
+public class ResponseBody<T> {
     private static final Gson gson = new Gson();
-
     /**
      * 业务响应码
      */
@@ -33,14 +31,17 @@ public  class ResponseBody <T> {
      */
     private T data;
 
-    public ResponseBody(){}
+    public ResponseBody() {
+    }
 
     public int getCode() {
         return code;
     }
+
     public String getMsg() {
         return msg;
     }
+
     public T getData() {
         return data;
     }
@@ -64,17 +65,18 @@ public  class ResponseBody <T> {
             //TODO 请求失败处理
             e.printStackTrace();
         }
+
         @Override
         public void onResponse(@NonNull Call call, Response response) throws IOException {
             //TODO 请求成功处理
-            Type jsonType = new TypeToken<ResponseBody<Object>>(){}.getType();
+            Type jsonType = new TypeToken<ResponseBody<Object>>() {
+            }.getType();
             // 获取响应体的json串
             String body = Objects.requireNonNull(response.body()).string();
             Log.d("info", body);
             // 解析json串到自己封装的状态
-            ResponseBody<Object> dataResponseBody = gson.fromJson(body,jsonType);
+            ResponseBody<Object> dataResponseBody = gson.fromJson(body, jsonType);
             Log.d("info", dataResponseBody.toString());
         }
     };
-
 }

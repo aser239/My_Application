@@ -29,8 +29,10 @@ import okhttp3.Response;
 
 public class Api {
     public static Gson gson = new Gson();
-    public static String appId = "d44f6a157edc4815b907124907b98e63";
-    public static String appSecret = "24416e30b926e08a54c7f93fded9670b769f3";
+    public static String appId = "c37e25afda404fbe9c401a733639c0df";
+    public static String appSecret = "070986397f6c59d8942bab314d8293d68b7a5";
+    public static String msg = null;
+
 
     public static void enroll(String username, int roleId, String password) {
         new Thread(() -> {
@@ -117,10 +119,12 @@ public class Api {
                         Log.d("info", body);
                         // 解析json串到自己封装的状态
                         ResponseBody<Person> dataResponseBody = gson.fromJson(body, jsonType);
+                        Api.msg = dataResponseBody.getMsg();
+                        System.out.println(Api.msg);
                         LoginData.loginUser = dataResponseBody.getData();
-                        Log.d("info", dataResponseBody.toString());
-                        Log.d("Person:", LoginData.loginUser.getId());
-                        Log.d("Person:", LoginData.loginUser.getUsername());
+                        //Log.d("info", dataResponseBody.toString());
+                        //Log.d("Person:", LoginData.loginUser.getId());
+                        //Log.d("Person:", LoginData.loginUser.getUsername());
                     }
                 });
             } catch (NetworkOnMainThreadException ex) {
