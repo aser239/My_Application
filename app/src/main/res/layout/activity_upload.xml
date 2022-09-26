@@ -3,24 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#009688">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.UploadActivity" >
 
-    <Button
+    <ImageView
         android:id="@+id/bt_upload"
-        android:background="@android:drawable/ic_input_add"
         android:layout_marginTop="100dp"
         android:layout_marginStart="100dp"
         android:layout_width="200dp"
-        android:layout_height="200dp"/>
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"/>
 
     <Button
+        android:id="@+id/bt_upload_ok"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="100dp"
         android:text="确定上传"
         android:textSize="20sp"
         />
-
-
 
 </LinearLayout>
