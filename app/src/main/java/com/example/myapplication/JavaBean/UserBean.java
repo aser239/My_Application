@@ -1,4 +1,4 @@
-package com.example.myapplication.javaBean;
+package com.example.myapplication.JavaBean;
 
 public class UserBean {
     private String status;

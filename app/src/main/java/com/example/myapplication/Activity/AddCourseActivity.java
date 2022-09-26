@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 
-import android.content.Intent;
 import android.icu.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,15 +13,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
-import com.example.myapplication.Data.CourseData;
 import com.example.myapplication.Interface.Api;
-import com.example.myapplication.Interface.ResponseBody;
 import com.example.myapplication.R;
-import com.example.myapplication.javaBean.Course;
 
 import java.util.Locale;
-
-import okhttp3.Response;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class AddCourseActivity extends AppCompatActivity implements View.OnClickListener{
@@ -77,7 +71,6 @@ public class AddCourseActivity extends AppCompatActivity implements View.OnClick
 
                 Api.AddCourse(CollegeName,CourseName, CoursePhoto,Introduce,endTime,RealName,startTime);
 
-                startActivity(new Intent(AddCourseActivity.this,GetCourseListActivity.class));
             }
         });
 
